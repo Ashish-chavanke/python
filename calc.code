@@ -1,0 +1,65 @@
+
+
+def calculator():
+
+print("Welcome .")
+
+while True:
+
+
+operation = input("Enter the operation: ")
+
+
+if operation not in ('+', '-', '*', '/'):
+
+print("Error: false operator")
+
+continue
+
+
+operand1 = input("1st number: ")
+
+operand2 = input("2nd number: ")
+
+
+if not operand1.isdigit() or not operand2.isdigit():
+
+print("Error: Please try again.")
+
+continue
+
+
+operand1 = int(operand1)
+
+operand2 = int(operand2)
+
+
+if operation == '+':
+
+result = operand1 + operand2
+
+elif operation == '-':
+
+result = operand1 - operand2
+
+elif operation == '*':
+
+result = operand1 * operand2
+
+elif operation == '/':
+
+if operand2 == 0:
+
+print("Error: Division by zero is undefined. Please try again.")
+
+continue
+
+result = operand1 / operand2
+
+
+print(f"Result: {operand1} {operation} {operand2} = {result}")
+
+
+if __name__ == "__main__":
+
+calculator()
